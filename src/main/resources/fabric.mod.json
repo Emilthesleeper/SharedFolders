@@ -4,8 +4,10 @@
   "version": "${version}",
   "name": "SharedFolders",
   "description": "Synchronize folders in your instance by using the default .minecraft folder.",
-  "authors": [],
-  "contact": {},
+  "authors": ["Emil_the_sleeper"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/sharedfolders"
+  },
   "license": "GPL-3.0",
   "icon": "assets/sharedfolders/icon.png",
   "environment": "client",
@@ -15,6 +17,9 @@
     ],
     "main": [
       "com.emilsleeper.sharedfolders.Sharedfolders"
+    ],
+    "modmenu": [
+      "com.emilsleeper.sharedfolders.client.SharedFoldersModMenu"
     ]
   },
   "mixins": [
@@ -27,6 +32,8 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": ">=${minecraft_version}",
+    "yet_another_config_lib_v3": ">=${yacl_version}",
+    "modmenu": ">=${modmenu_version}"
   }
 }
