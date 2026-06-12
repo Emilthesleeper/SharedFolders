@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "sharedfolders",
+  "version": "${version}",
+  "name": "SharedFolders",
+  "description": "Synchronize folders in your instance by using the default .minecraft folder.",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/sharedfolders/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.emilsleeper.sharedfolders.client.SharedfoldersClient"
+    ],
+    "main": [
+      "com.emilsleeper.sharedfolders.Sharedfolders"
+    ]
+  },
+  "mixins": [
+    "sharedfolders.mixins.json",
+    {
+      "config": "sharedfolders.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
